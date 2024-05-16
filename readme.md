@@ -4,7 +4,7 @@ Gewini is a modern and feature-rich search engine that combines the power of var
 
 ## Live Demo
 
-You can access the live demo of the Gewini Search Engine at [GEWINI](https://gewini.example.com).
+You can access the live demo of the Gewini Search Engine at [GEWINI](https://ayushibadika.github.io/gewini/).
 
 ## Features
 
