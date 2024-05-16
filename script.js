@@ -8,13 +8,13 @@ searchBtn.addEventListener("click", (e) => {
   e.preventDefault();
   searchHistory.innerHTML = "";
   if (searchBarInput.value == "") return;
-  window.location.href = `/result/result.html?query=${searchBarInput.value}`;
+  window.location.href = `/gewini/result/result.html?query=${searchBarInput.value}`;
 });
 searchBarInput.addEventListener("keydown", (e) => {
   if (e.key == "Enter" || e.key == 13) {
     if (searchBarInput.value == "") return;
     searchHistory.innerHTML = "";
-    window.location.href = `/result/result.html?query=${searchBarInput.value}`;
+    window.location.href = `/gewini/result/result.html?query=${searchBarInput.value}`;
   }
 });
 
