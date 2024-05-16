@@ -30,13 +30,27 @@ a:visited {
   font-style: italic;
   font-weight: bold;
 }
+.tabNav {
+  display: flex;
+  justify-content: space-between;
+}
 
 .searchTabs {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+
   gap: 10px;
 }
+.sortDropdown {
+  border-radius: 1rem;
+  padding: 0 1rem;
+  outline: none;
+}
 
+option:hover {
+  background-color: #6101d3;
+}
 .tab {
   background-color: #ffffff;
   color: black;
@@ -179,11 +193,15 @@ a:visited {
   background-color: white;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 0.5rem;
-  margin: 0 3rem 3rem 3rem;
-  width: 95%;
-  padding: 2rem 4rem;
+  margin: 0 2rem 3rem 2rem;
+  width: 92.5%;
+  padding: 2rem 1rem;
   gap: 1.5rem;
   flex-direction: column;
+}
+
+.geminiResults {
+  padding: 2rem 3rem;
 }
 .noResults {
   justify-content: center;
@@ -324,6 +342,20 @@ pre {
 @media screen and (max-width: 769px) {
   .metaApp {
     overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .navbar {
+    padding: 2rem 1rem;
+  }
+  .tabNav {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .sortDropdown {
+    padding: 0.4rem;
+    width: 100px;
   }
 }
 @media screen and (max-width: 426px) {
