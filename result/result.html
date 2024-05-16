@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Results</title>
+    <!-- Roboto Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/21c246e8b1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="shortcut icon"
+      href="/assests/results-svgrepo-com.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <navbar class="navbar">
+      <div class="searchBar">
+        <div class="logo"><a href="../index.html">Gewini</a><span>!</span></div>
+
+        <div class="relative">
+          <input
+            class="searchBarInput"
+            type="text"
+            placeholder="Search 3D : Google/Wikipedia/Gemini"
+          />
+
+          <div class="searchHistory"></div>
+        </div>
+        <div class="searchIcon">
+          <img src="/assests/search-alt-1-svgrepo-com.svg" alt="" />
+        </div>
+
+        <div class="micDiv">
+          <button type="button" class="mic">
+            <i class="fa fa-microphone"></i>
+          </button>
+        </div>
+      </div>
+      <div class="searchTabs">
+        <div class="googleTab tab selectedTab">Google</div>
+        <div class="wikipediaTab tab">Wikipedia</div>
+        <div class="geminiTab tab">Gemini</div>
+      </div>
+    </navbar>
+    <section class="googleSection">
+      <div class="loader googleLoader"></div>
+      <div class="googleResults"></div>
+    </section>
+    <section class="wikipediaSection">
+      <div class="loader wikipediaLoader"></div>
+      <div class="wikipediaResults"></div>
+    </section>
+    <section class="geminiSection">
+      <div class="loader geminiLoader"></div>
+      <div class="geminiResults"></div>
+    </section>
+    <!-- script -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
+
+    <script type="module" src="./result.js"></script>
+  </body>
+</html>

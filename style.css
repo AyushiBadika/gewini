@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: #d8d8d8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > div {
+  background-color: white;
+  height: 90%;
+  width: 85%;
+
+  border-radius: 5px;
+}
+.navbarMenu {
+  width: 15px;
+}
+/* padding */
+/* left-right : 4rem */
+
+/* colors */
+/* #6101D3 */
+/* #808080; */
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #6101d3;
+  cursor: pointer;
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.9rem;
+}
+
+.navbarWeather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.temperature {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.weatherType {
+  font-size: 0.7rem;
+  color: #808080;
+}
+
+/* svg icons style */
+.weatherIcon img,
+.navbarUser img,
+.searchBar img {
+  width: 1.25rem;
+}
+
+.weatherImage {
+  transform: scale(1.5);
+  margin-right: 0.5rem;
+}
+
+.userName {
+  font-weight: bold;
+  font-size: 14px;
+}
+.btn {
+  background-color: white;
+  border-radius: 6px;
+  color: black;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  height: 45px;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  width: 50%;
+}
+
+.btn:disabled {
+  cursor: default;
+}
+.btn:active {
+  transform: scale(0.9);
+}
+.selectedBtn {
+  color: white;
+  background-color: #6101d3;
+}
+
+/* hero Section */
+
+.heroSection {
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #faf9fa;
+  margin: 0 4rem;
+  border-radius: 0.5rem;
+}
+
+.greet {
+  font-size: 2rem;
+}
+.searchBtns {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.dateAndTime {
+  font-size: 12px;
+  color: #808080;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 70%;
+  height: 40px;
+  margin: 2rem 0 2rem 0;
+  position: relative;
+}
+.searchIcon,
+.voiceIcon {
+  position: absolute;
+  cursor: pointer;
+}
+.searchIcon {
+  left: 1rem;
+}
+
+.searchHistory {
+  position: absolute;
+  background-color: white;
+  top: 2.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.historyElement:last-child {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.historyElement {
+  padding: 0.5rem 1.25rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  width: 100%;
+
+  cursor: pointer;
+}
+
+.historyElement:hover {
+  background-color: rgba(149, 157, 165, 0.1);
+}
+.micDiv {
+  position: absolute;
+  right: 1rem;
+}
+
+.mic {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: #6101d3;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.25s;
+  z-index: 100;
+  /* right: 3rem; */
+}
+.fa {
+  z-index: 200;
+}
+
+.mic::before {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background-color: inherit;
+  z-index: 2;
+}
+@keyframes listening {
+  from {
+    opacity: 0.35;
+  }
+  to {
+    transform: scale(1.75);
+    opacity: 0.05;
+  }
+}
+.listening {
+  background-color: #5f01d3b3;
+}
+.listening::before {
+  animation: listening 1.3s infinite;
+}
+
+/*  */
+
+.searchBar input {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  border: none;
+  padding: 0 4rem 0 3rem;
+}
+
+.searchBar input:focus {
+  outline: none;
+}
